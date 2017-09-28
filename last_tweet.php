@@ -1,14 +1,8 @@
 
-<html>
-    <head>
-        <title>基本的なPHPの書き方</title>
-    </head>
-    <body>
-	
-        <?
-        php echo "Hi!";
-        
-        //TwistOAuthの実行
+<?php
+
+
+//TwistOAuthの実行
 require_once('TwistOAuth.phar');
 
 
@@ -19,7 +13,7 @@ $access_token = "908499373322944513-ak6xdRWnoRiCtslT70nj2CJrfcHyopt";
 $access_token_secret = "y80hIUKwqfDRMzF7mDNDAgXaCB6meF7YtiIhR50Incq6P";
 
 //listの読み込みとメッセージの取得
-$filelist = file('list.txt');
+$filelist = file('owalist.txt');
 if( shuffle($filelist) ){
   $message = $filelist[0];
 }
@@ -39,7 +33,4 @@ try {
 }
 
 
-         ?>
-
-     </body>
-</html>
+?>
